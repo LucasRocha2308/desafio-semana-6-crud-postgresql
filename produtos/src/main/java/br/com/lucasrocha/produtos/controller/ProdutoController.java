@@ -29,6 +29,14 @@ public class ProdutoController {
         return produtoDAO.save(produto);
     }
 
+    @DeleteMapping("/produto")
+    public void deletaProduto(@RequestBody Produto produto){
+        produtoDAO.delete(produto);
+    }
 
+    @PutMapping("/produto")
+    public Produto atualizaProduto(@RequestBody Produto produto){
+        return produtoDAO.save(produto);
+    }
 
 }
